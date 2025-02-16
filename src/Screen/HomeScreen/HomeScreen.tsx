@@ -1,11 +1,13 @@
 import React from 'react'
-import { View,Text } from 'react-native'
+import {ScrollView,Text } from 'react-native'
+import Header from '../../components/Header/Header'
 
 function HomeScreen() {
   return (
-    <View>
-        <Text>Serdar</Text>
-    </View>
+    <ScrollView>
+      <Header />
+      
+    </ScrollView>
   )
 }
 
