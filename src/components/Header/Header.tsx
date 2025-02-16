@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Image, Dimensions } from 'react-native';
+import { StyleSheet, View,Text, Image, Dimensions } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
@@ -10,7 +10,6 @@ function Header() {
         <Image 
           source={require('../../../assets/collection.jpeg')}  
           style={styles.imageheader}
-          
         />
       </View>
     </View>
@@ -23,7 +22,6 @@ const styles = StyleSheet.create({
     
   },
   containerimage: {
-    width: width,
     height:370,
   },
   imageheader: {
