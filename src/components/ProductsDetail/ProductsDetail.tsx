@@ -1,27 +1,44 @@
 import React from 'react'
-import { View,StyleSheet,Text,Image, TouchableOpacity, Dimensions } from 'react-native'
-const {width,height} = Dimensions.get('window')
-function ProductsDetail() {
-    
-  return (
-    <TouchableOpacity>
-        <View style ={styles.imagecontainer} >
-            <Image style = {styles.image} source={require('../../../assets/glasspiecone.jpeg')}/>
-            <Text>Glass pinecone</Text>
-            <Text>$7.50</Text>
-        </View>
-    </TouchableOpacity>
-  )
+import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
+import productList from '../../../assets/ProductsList'
+const { width, height } = Dimensions.get('window')
+interface Product {
+    image: string;
+    title: string;
+    price: string;
+}
+
+function ProductsDetail({ product }: { product: Product }) {
+
+    return (
+        <TouchableOpacity>
+            <View style={styles.imagecontainer} >
+                <Image style={styles.images} source={{ uri: product.image }} />
+                <Text style={styles.title}>{product.title}</Text>
+                <Text style={styles.price}>{product.price}</Text>
+            </View>
+        </TouchableOpacity>
+    )
 }
 const styles = StyleSheet.create({
-    imagecontainer:{
-        marginTop:20,
-        marginLeft:20,
+    imagecontainer: {
+        marginTop: 20,
+        marginLeft: 16,
+        marginRight: -5,
     },
-    image:{
-        width: width*0.45,
-        height:width*0.45,
+    images: {
+        width: width * 0.45,
+        height: width * 0.45,
+    },
+    title: {
+        marginTop:7,
+        fontSize:16,
+        opacity:0.7,
+    },
+    price: {
+        fontSize:14,
+        fontWeight:'600'
     },
 })
 
-export default ProductsDetail
+export default ProductsDetail;
