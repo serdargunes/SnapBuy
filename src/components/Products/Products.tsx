@@ -6,7 +6,7 @@ import ProductsDetail from '../ProductsDetail/ProductsDetail';
 
 function Products() {
   const [list, setList] = useState(ProductsList);
-  const renderProduct = ({ item }: { item: any }) => <ProductsDetail product={item} />;
+  const renderProduct = ({ item }: { item: typeof ProductsList[0] }) => <ProductsDetail product={item} />;
   return (
     <FlatList
     data={list}

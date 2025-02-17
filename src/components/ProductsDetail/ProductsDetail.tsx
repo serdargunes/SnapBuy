@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, Text, Image, TouchableOpacity, Dimensions } from 'react-native'
 import productList from '../../../assets/ProductsList'
+import { useNavigation } from '@react-navigation/native'
 const { width, height } = Dimensions.get('window')
 interface Product {
     image: string;
@@ -9,9 +10,10 @@ interface Product {
 }
 
 function ProductsDetail({ product }: { product: Product }) {
+    const navigation = useNavigation();
 
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Product')}>
             <View style={styles.imagecontainer} >
                 <Image style={styles.images} source={{ uri: product.image }} />
                 <Text style={styles.title}>{product.title}</Text>
