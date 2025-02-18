@@ -29,7 +29,7 @@ function ProductsScreen() {
 const styles = StyleSheet.create({
     image:{
         width:500,
-        height:500,
+        height:600,
         
     },
     titlebox:{
@@ -67,32 +67,35 @@ const styles = StyleSheet.create({
         marginTop:40,
         flexDirection:'row',
         height:130,
-        justifyContent:'center',
+        justifyContent:'space-around',
         alignItems:'center',
+        
 
     },
     addtocartPrice:{
+       
         fontSize:30,
         fontWeight:'500',
-        marginLeft:40,
+        marginLeft:-7,
+       
         
     },
     button:{
-        fontSize:30,
         backgroundColor:'black',
-        marginLeft:65,
         borderRadius:40,
         height:70,
         width:280,
         justifyContent:'center',
         alignItems:'center',
-        marginRight:30,
+        marginRight:0,
+        
+        
         
     },
     addtocartText:{
-        fontSize:30,
-        color:'white',
-
+        fontSize:20,
+        color:'#E0E0E0',
+        fontWeight:'400',
     },
 })
 export default ProductsScreen
