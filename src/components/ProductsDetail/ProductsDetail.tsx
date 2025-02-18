@@ -13,13 +13,14 @@ function ProductsDetail({ product }: { product: Product }) {
     const navigation = useNavigation();
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Product')}>
-            <View style={styles.imagecontainer} >
-                <Image style={styles.images} source={{ uri: product.image }} />
-                <Text style={styles.title}>{product.title}</Text>
-                <Text style={styles.price}>{product.price}</Text>
-            </View>
-        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Product', { product })}>
+        <View style={styles.imagecontainer} >
+            <Image style={styles.images} source={{ uri: product.image }} />
+            <Text style={styles.title}>{product.title}</Text>
+            <Text style={styles.price}>{product.price}</Text>
+        </View>
+    </TouchableOpacity>
+    
     )
 }
 const styles = StyleSheet.create({
