@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, ScrollView, Text, Image, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, ScrollView, Text, Image, View,Button, TouchableOpacity } from 'react-native'
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useRoute } from '@react-navigation/native';
 
@@ -10,12 +10,14 @@ function ProductsCard() {
     return (
         <ScrollView>
             <View>
-                <Image style={styles.image} source={{ uri: product.image }} />
+             <Image style={styles.image} source={{ uri: product.image }} />
             </View>
             <View style={styles.titlebox}>
                 <Text style={styles.title}>{product.title}</Text>
+                <View style = {styles.starpuan}>
                 <Text style={styles.star}><AntDesign name="star" size={24} color="orange" /></Text>
                 <Text style={styles.puan}>4.9</Text>
+                </View>
             </View>
             <View>
                 <Text style={styles.explanation} numberOfLines={5} ellipsizeMode='tail'>
@@ -38,17 +40,22 @@ const styles = StyleSheet.create({
         height: 600,
     },
     titlebox: {
-        marginTop: 20,
-        marginLeft: -5,
-        flexDirection: 'row',
-        justifyContent: 'center',
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginTop:40,
     },
     title: {
         fontSize: 25,
         fontWeight: '500',
+        marginLeft:20,
     },
+    starpuan:{
+        flexDirection:'row',
+        marginRight:20,
+        },
     star: {
-        marginLeft: 90,
+        
     },
     puan: {
         marginLeft: 8,

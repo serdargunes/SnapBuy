@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import HomeScreen from './src/Screen/HomeScreen/HomeScreen';
 import ProductsScreen from './src/Screen/ProductsScreen/ProductsScreen';
 import { NavigationContainer } from '@react-navigation/native';
@@ -15,13 +15,8 @@ export default function App() {
         options={{headerShown:false,headerTitle:''}}
         />
         <Stack.Screen name="Product" component={ProductsScreen}
-        options={
-          {
-            
-            headerShown:false,
-            headerTitle:'',
-          }
-        }
+        options={{headerShown:false}}
+        
         />
       </Stack.Navigator>
     </NavigationContainer>
