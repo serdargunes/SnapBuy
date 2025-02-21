@@ -2,9 +2,11 @@ import React from 'react'
 import { StyleSheet, ScrollView, Text, Image, View,Button, TouchableOpacity } from 'react-native'
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useRoute } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 function ProductsCard() {
     const route = useRoute();
+    const navigation = useNavigation();
     const { product } = route.params;
 
     return (
@@ -27,7 +29,7 @@ function ProductsCard() {
             </View>
             <View style={styles.addtocartContainer}>
                 <Text style={styles.addtocartPrice}>{product.price}</Text>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Sell")}>
                     <Text style={styles.addtocartText}>Add to cart</Text>
                 </TouchableOpacity>
             </View>
