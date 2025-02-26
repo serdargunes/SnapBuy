@@ -5,10 +5,12 @@ import { useRoute } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { useProduct } from '../../context/ProductContext/ProductContext';
 
+
 function ProductsCard() {
+    const {addProduct} = useProduct();
     const route = useRoute();
     const navigation = useNavigation();
-    const { product } = route.params;
+    const { product } = route.params as { product: any };
 
     return (
         <ScrollView>
@@ -30,9 +32,15 @@ function ProductsCard() {
             </View>
             <View style={styles.addtocartContainer}>
                 <Text style={styles.addtocartPrice}>{product.price}</Text>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Sell")}>
-                    <Text style={styles.addtocartText}>Add to cart</Text>
-                </TouchableOpacity>
+                <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            addProduct(product); // Ürünü sepete ekle
+            navigation.navigate("Sell"); // Sepet sayfasına git
+          }}
+        >
+          <Text style={styles.addtocartText}>Add to cart</Text>
+        </TouchableOpacity>
             </View>
         </ScrollView>
     )
