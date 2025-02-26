@@ -1,98 +1,76 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
+import React from "react";
+import { View, Text, Image, FlatList, StyleSheet,TouchableOpacity } from "react-native";
+import { useProduct } from "../../context/ProductContext/ProductContext";
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
-import EvilIcons from '@expo/vector-icons/EvilIcons';
 
-function SellScreen() {
+function SellPage() {
+    const { products } = useProduct(); // Context'ten ürünleri al
+    
+
     return (
-        <ScrollView style={{ backgroundColor: 'white' }}>
-            <View style={styles.container}>
-                <View style={styles.image}>
-                    <Image style={styles.image} source={require("../../../assets/toydeer.jpeg")} />
-                </View>
-                <View style={styles.textbox}>
-                    <Text style={{ fontSize: 18, fontWeight: '500', marginTop: 10, }}>New Year's toy deer</Text>
-                    <Text style={{ fontSize: 18, opacity: 0.5, marginTop: 10, }}>White</Text>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 25 }}>$12.99</Text>
-                    <TouchableOpacity style={styles.exit}>
-                        <Text><FontAwesome6 name="x" size={18} color="gray" /></Text>
-                    </TouchableOpacity>
-                    <View style={{ position: 'absolute', flexDirection: 'row', marginTop: 80, marginLeft: 140, alignItems: 'center' }}>
-                        <TouchableOpacity>
-                            <Text style={styles.minus}>-</Text>
-                        </TouchableOpacity>
-                        <Text style={{ fontSize: 20, fontWeight: '400' }}>1</Text>
-                        <TouchableOpacity>
-                            <Text style={styles.plus}>+</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </View>
-            <View style={styles.container}>
-                <View style={styles.image}>
-                    <Image style={styles.image} source={require("../../../assets/glasspiecone1.jpeg")} />
-                </View>
-                <View style={styles.textbox}>
-                    <Text style={{ fontSize: 18, fontWeight: '500', marginTop: 10, }}>New Year's toy deer</Text>
-                    <Text style={{ fontSize: 18, opacity: 0.5, marginTop: 10, }}>White</Text>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 25 }}>$12.99</Text>
-                    <TouchableOpacity style={styles.exit}>
-                        <Text><FontAwesome6 name="x" size={18} color="gray" /></Text>
-                    </TouchableOpacity>
-                    <View style={{ position: 'absolute', flexDirection: 'row', marginTop: 80, marginLeft: 140, alignItems: 'center' }}>
-                        <TouchableOpacity>
-                            <Text style={styles.minus}>-</Text>
-                        </TouchableOpacity>
-                        <Text style={{ fontSize: 20, fontWeight: '400' }}>1</Text>
-                        <TouchableOpacity>
-                            <Text style={styles.plus}>+</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </View>
-            <View style={styles.container}>
-                <View style={styles.image}>
-                    <Image style={styles.image} source={require("../../../assets/candle1.jpeg")} />
-                </View>
-                <View style={styles.textbox}>
-                    <Text style={{ fontSize: 18, fontWeight: '500', marginTop: 10, }}>New Year's toy deer</Text>
-                    <Text style={{ fontSize: 18, opacity: 0.5, marginTop: 10, }}>White</Text>
-                    <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 25 }}>$12.99</Text>
-                    <TouchableOpacity style={styles.exit}>
-                        <Text><FontAwesome6 name="x" size={18} color="gray" /></Text>
-                    </TouchableOpacity>
-                    <View style={{ position: 'absolute', flexDirection: 'row', marginTop: 80, marginLeft: 140, alignItems: 'center' }}>
-                        <TouchableOpacity>
-                            <Text style={styles.minus}>-</Text>
-                        </TouchableOpacity>
-                        <Text style={{ fontSize: 20, fontWeight: '400' }}>1</Text>
-                        <TouchableOpacity>
-                            <Text style={styles.plus}>+</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-            </View>
-        </ScrollView>
-    )
-}
-const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        marginTop: 30,
-        backgroundColor: ''
+        <View style={styles.container}>
 
+            <FlatList
+                data={products}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => (
+                    <View style={styles.product}>
+                        <Image style={styles.image} source={{ uri: item.image }} />
+                        <View style={styles.textbox}>
+                    <Text style={{ fontSize: 18, fontWeight: '500', marginTop: 10, }}>{item.title}</Text>
+                    <Text style={{ fontSize: 18, opacity: 0.5, marginTop: 10, }}>White</Text>
+                    <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 25 }}>{item.price}</Text>
+                    <TouchableOpacity style={styles.exit}>
+                        <Text><FontAwesome6 name="x" size={18} color="gray" /></Text>
+                    </TouchableOpacity>
+                    <View style={{flexDirection: 'row', marginTop: -30, marginLeft: 130, alignItems: 'center',justifyContent:'center' }}>
+                        <TouchableOpacity>
+                            <Text style={styles.minus}>-</Text>
+                        </TouchableOpacity>
+                        <Text style={{ fontSize: 20, fontWeight: '400' }}>1</Text>
+                        <TouchableOpacity>
+                            <Text style={styles.plus}>+</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                    </View>
+                )}
+            />
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container:
+    {
+        flex: 1,
+        padding: 20,
+        backgroundColor: "white"
     },
-    image: {
+    title:
+    {
+        fontSize: 24,
+        fontWeight: "bold",
+        marginBottom: 20
+    },
+    product:
+    {
+        flexDirection: "row",
+        alignItems: "center",
+        marginBottom: 10
+    },
+    image:
+    {
         width: 120,
         height: 120,
-        marginLeft: 10,
+        marginLeft: -8,
     },
     textbox: {
         marginLeft: 25,
     },
     exit: {
         position: 'absolute',
-        right: -90,
+        right: 0,
         marginTop: 12,
     },
     plus: {
@@ -105,7 +83,7 @@ const styles = StyleSheet.create({
         height: 40,
         width: 40,
         marginLeft: 10,
-        fontWeight: '300'
+        fontWeight: '300',
 
     },
     minus: {
@@ -120,5 +98,6 @@ const styles = StyleSheet.create({
         marginRight: 10,
         fontWeight: '300',
     },
-})
-export default SellScreen
+});
+
+export default SellPage;
