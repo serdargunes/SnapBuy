@@ -4,9 +4,11 @@ import productList from '../../../assets/ProductsList'
 import { useNavigation } from '@react-navigation/native'
 const { width, height } = Dimensions.get('window')
 interface Product {
-    image: string;
+    id: string;
     title: string;
-    price: string;
+    price: number;
+    image: string;
+    quantity: number;
 }
 
 function ProductsDetail({ product }: { product: Product }) {
