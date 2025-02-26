@@ -18,6 +18,7 @@ function ProductsDetail({ product }: { product: Product }) {
             <Image style={styles.images} source={{ uri: product.image }} />
             <Text style={styles.title}>{product.title}</Text>
             <Text style={styles.price}>{product.price}</Text>
+            
         </View>
     </TouchableOpacity>
     
