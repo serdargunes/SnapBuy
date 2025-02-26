@@ -11,4 +11,4 @@ function ProductsScreen() {
   )
 }
 
-export default ProductsScreen
+export default ProductsScreen;

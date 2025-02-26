@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyleSheet, ScrollView, Text, Image, View,Button, TouchableOpacity } from 'react-native'
+import { StyleSheet, ScrollView, Text, Image, View,Button, TouchableOpacity, ImageBackground } from 'react-native'
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useRoute } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { useProduct } from '../../context/ProductContext/ProductContext';
-
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 function ProductsCard() {
     const {addProduct} = useProduct();
@@ -14,8 +14,13 @@ function ProductsCard() {
 
     return (
         <ScrollView>
+            
             <View>
-             <Image style={styles.image} source={{ uri: product.image }} />
+             <ImageBackground style={styles.image} source={{ uri: product.image }} >
+                <TouchableOpacity onPress={() => navigation.navigate("Product")}>
+                    <Text style = {{marginTop:65,margin:20,}}><FontAwesome6 name="arrow-left-long" size={26} color="white" /></Text>
+                </TouchableOpacity>
+             </ImageBackground>
             </View>
             <View style={styles.titlebox}>
                 <Text style={styles.title}>{product.title}</Text>
