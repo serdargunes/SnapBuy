@@ -5,11 +5,13 @@ import ProductsScreen from './src/Screen/ProductsScreen/ProductsScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import SellScreen from './src/Screen/SellScreen/SellScreen';
+import { ProductProvider } from './src/context/ProductContext/ProductContext';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
+    <ProductProvider>
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen}
@@ -21,6 +23,7 @@ export default function App() {
         <Stack.Screen name ="Sell" component={SellScreen} options={{}}/>
       </Stack.Navigator>
     </NavigationContainer>
+    </ProductProvider>
 
   );
 }
