@@ -3,6 +3,7 @@ import { StyleSheet, ScrollView, Text, Image, View,Button, TouchableOpacity } fr
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { useRoute } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
+import { useProduct } from '../../context/ProductContext/ProductContext';
 
 function ProductsCard() {
     const route = useRoute();
