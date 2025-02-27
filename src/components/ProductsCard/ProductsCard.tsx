@@ -17,7 +17,7 @@ function ProductsCard() {
             
             <View>
              <ImageBackground style={styles.image} source={{ uri: product.image }} >
-                <TouchableOpacity onPress={() => navigation.navigate("Product")}>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Text style = {{marginTop:65,margin:20,}}><FontAwesome6 name="arrow-left-long" size={26} color="white" /></Text>
                 </TouchableOpacity>
              </ImageBackground>

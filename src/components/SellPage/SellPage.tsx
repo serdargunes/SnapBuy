@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 import EvilIcons from '@expo/vector-icons/EvilIcons';
-
+sadasdsa
 function SellScreen() {
     return (
         <ScrollView style={{ backgroundColor: 'white' }}>
@@ -72,6 +72,7 @@ function SellScreen() {
                     </View>
                 </View>
             </View>
+            <View style = {{backgroundColor:'red'}}><Text>serdar</Text></View>
         </ScrollView>
     )
 }
