@@ -39,7 +39,9 @@ function SellPage() {
                 )}
             />
         </View>
-        <View><Text>Serdar</Text></View>
+        <View>
+            <Text>New2025</Text>
+        </View>
         </ScrollView>
     );
 }

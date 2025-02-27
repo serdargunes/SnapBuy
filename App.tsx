@@ -20,7 +20,12 @@ export default function App() {
         <Stack.Screen name="Product" component={ProductsScreen}
         options={{headerShown:false}}
         />
-        <Stack.Screen name ="Sell" component={SellScreen} options={{}}/>
+        <Stack.Screen name ="Sell" component={SellScreen} options={{
+        headerTitle:"My cart",
+        headerShadowVisible:false,
+        headerTintColor:"black",
+        headerBackTitle:"",
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
     </ProductProvider>
