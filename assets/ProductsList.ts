@@ -2,13 +2,13 @@ const productList = [
   {
     id: '1',
     title: 'Glass Pinecone',
-    price: '$7.50',
+    price: '$14.50',
     image: 'https://carlyleavenue.com/cdn/shop/files/Zodax_CH-7037_900x_967528de-26f6-4ef7-aa51-ad20871b9868.jpg?v=1696283021'
   },
   {
     id: '2',
     title: 'New Years Plate',
-    price: '$10.00',
+    price: '$10.99',
     image: 'https://m.media-amazon.com/images/I/51ADQUWXK4L._AC_UF1000,1000_QL80_.jpg'
   },
   {
@@ -38,7 +38,7 @@ const productList = [
   {
     id: '7',
     title: 'Blanked',
-    price: '$59.50',
+    price: '$9.50',
     image: 'https://blog.ciceksepeti.com/wp-content/uploads/2020/12/15.12.20-blog-cs-gorsel-kisdekorasyon-compress.jpg'
   },
   {
