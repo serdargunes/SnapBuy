@@ -7,7 +7,7 @@ const productList = [
   },
   {
     id: '2',
-    title: 'New Years Plate',
+    title: 'New Years Toy Deer',
     price: '$10.99',
     image: 'https://m.media-amazon.com/images/I/51ADQUWXK4L._AC_UF1000,1000_QL80_.jpg'
   },
@@ -25,7 +25,7 @@ const productList = [
   },
   {
     id: '5',
-    title: 'New Years Toy Deer',
+    title: 'New Years Plate',
     price: '$12.99',
     image: 'https://m.media-amazon.com/images/I/71oTNh40cjL.jpg'
   },
