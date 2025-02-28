@@ -29,7 +29,7 @@ function SellPage() {
                                     <TouchableOpacity>
                                         <Text style={styles.minus}>-</Text>
                                     </TouchableOpacity>
-                                    <Text style={{ fontSize: 20, fontWeight: '400' }}>2</Text>
+                                    <Text style={{ fontSize: 20, fontWeight: '400' }}>1</Text>
                                     <TouchableOpacity>
                                         <Text style={styles.plus}>+</Text>
                                     </TouchableOpacity>
