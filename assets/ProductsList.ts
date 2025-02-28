@@ -25,9 +25,9 @@ const productList = [
   },
   {
     id: '5',
-    title: 'New Years Plate',
+    title: 'Pillow Cases',
     price: '$12.99',
-    image: 'https://m.media-amazon.com/images/I/71oTNh40cjL.jpg'
+    image: 'https://img.kwcdn.com/product/open/72f8a7c9a7c7481bbec2afec783737e7-goods.jpeg?imageView2/2/w/800/q/70/format/webp'
   },
   {
     id: '6',
@@ -43,52 +43,36 @@ const productList = [
   },
   {
     id: '8',
-    title: 'Chandelier',
-    price: '$149.00',
-    image: 'https://sinpas.com.tr/Uploads/assets/cms/ContentImages/53f7bc03-d2d1-486b-af05-d0cd177b7fb7.jpg'
+    title: 'Glass Sand Art',
+    price: '$19.99',
+    image: 'https://img.kwcdn.com/product/fancy/ffea87b2-1586-4c8e-aade-de58aff60410.jpg?imageView2/2/w/800/q/70/format/webp'
   },
   {
     id: '9',
-    title: 'Smart Home Hub',
-    price: '$129',
-    image: 'https://sinpas.com.tr/Uploads/assets/cms/ContentImages/53f7bc03-d2d1-486b-af05-d0cd177b7fb7.jpg'
+    title: 'Golden Deers Culpture',
+    price: '$29.50',
+    image: 'https://img.kwcdn.com/product/fancy/45101c1f-79cb-4691-9e71-9a4b02d7c8ed.jpg?imageView2/2/w/800/q/70/format/webp'
   },
   {
     id: '10',
-    title: '4K TV',
-    price: '$1199',
-    image: 'https://via.placeholder.com/150/FF6347/FFFFFF?text=4K+TV'
+    title: 'Snow Flake',
+    price: '$39.99',
+    image: 'https://img.kwcdn.com/product/open/2024-08-29/1724928839861-3204d806aa02492f96653ed5159ecf2f-goods.jpeg?imageView2/2/w/800/q/70/format/webp'
   },
   {
     id: '11',
-    title: 'Wireless Mouse',
-    price: '$49',
-    image: 'https://via.placeholder.com/150/4B0082/FFFFFF?text=Mouse'
+    title: 'Acrylic Tree Ornament',
+    price: '$49.99',
+    image: 'https://img.kwcdn.com/product/fancy/e6ea9337-8913-4049-b657-86bcbad0a1de.jpg?imageView2/2/w/800/q/70/format/webp'
   },
   {
-    id: '12',
-    title: 'Mechanical Keyboard',
-    price: '$129',
-    image: 'https://via.placeholder.com/150/FF4500/FFFFFF?text=Keyboard'
+    id: '11',
+    title: 'Deer Ornament',
+    price: '$19.99',
+    image: 'https://img.kwcdn.com/product/fancy/ef2b9aca-3795-48f7-b3d7-f9ff8baf73e3.jpg?imageView2/2/w/800/q/70/format/webp'
   },
-  {
-    id: '13',
-    title: 'External Hard Drive',
-    price: '$89',
-    image: 'https://via.placeholder.com/150/DA70D6/FFFFFF?text=Hard+Drive'
-  },
-  {
-    id: '14',
-    title: 'Portable Charger',
-    price: '$39',
-    image: 'https://via.placeholder.com/150/7FFF00/000000?text=Charger'
-  },
-  {
-    id: '15',
-    title: 'VR Headset',
-    price: '$399',
-    image: 'https://via.placeholder.com/150/DC143C/FFFFFF?text=VR+Headset'
-  }
+  
+  
 ];
 
 export default productList;
