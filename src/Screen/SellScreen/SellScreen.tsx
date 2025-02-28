@@ -20,7 +20,7 @@ function SellPage() {
                             <Image style={styles.image} source={{ uri: item.image }} />
                             <View style={styles.textbox}>
                                 <Text style={{ fontSize: 18, fontWeight: '500', marginTop: 10, }}>{item.title}</Text>
-                                <Text style={{ fontSize: 18, opacity: 0.5, marginTop: 10, }}>Whitee</Text>
+                                <Text style={{ fontSize: 18, opacity: 0.5, marginTop: 10, }}>White</Text>
                                 <Text style={{ fontSize: 18, fontWeight: 'bold', marginTop: 25 }}>{item.price}</Text>
                                 <TouchableOpacity style={styles.exit}>
                                     <Text><FontAwesome6 name="x" size={18} color="gray" /></Text>
